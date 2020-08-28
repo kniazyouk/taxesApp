@@ -1,17 +1,45 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Calculadora IVA-IT
+  <ion-toolbar id="toolbar1">
+    <ion-title id="title1">
+      Calculadora Tributaria
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content id="fondo" [fullscreen]="true">
   <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+    <ion-toolbar id="toolbar2">
+      <ion-title id="title2" size="large">Calculadora Tributaria</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Calcule su carga tributaria</ion-card-subtitle>
+      <ion-card-title>IVA - IT</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Para calcular la deuda tributaria que tendra, simplemente ingrese el monto facturado debajo de este mensaje.   
+    </ion-card-content>
+
+    <ion-item>
+      <ion-label position="floating">Ingrese Monto a Calcular</ion-label>
+      <ion-input [(ngModel)]="fac" id="monto" type="number" value=""></ion-input>
+    </ion-item>
+  </ion-card>
+  <ion-button id="button" (click)="calcular()" expand="block" fill="outline" color="tertiary">CALCULAR</ion-button>
+  <ion-card>  
+    <ion-card-content>
+      This is content, without any paragraph or header tags,
+      within an ion-card-content element.
+    </ion-card-content>
+    
+    <div id="resultado">
+      <ion-input [(ngModel)]="IVA" value="0" readonly>IVA: </ion-input><span id="bs">bs</span>
+      <ion-input [(ngModel)]="IT" value="0" readonly>IT: </ion-input><span id="bs">bs</span>
+      <ion-input [(ngModel)]="utilidad" value="0" readonly>Utilidad: </ion-input><span id="bs">bs</span>
+    </div>
+  </ion-card>
+  
 </ion-content>
