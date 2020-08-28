@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { ValueConverter } from '@angular/compiler/src/render3/view/template';
+/*
 import { parse } from 'path';
-
+*/
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
